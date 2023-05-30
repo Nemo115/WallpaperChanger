@@ -56,10 +56,10 @@ int main()
     bool fileChosen = false;
     char *path = getenv("TMP");
     int len = strlen(path);
-    path[len-11] = '\0';//C:\Users\leo.liu\AppData
+    path[len-11] = '\0';
     printf("\nPath: %s\n", path);
+    
 
-    //C:\Users\leo.liu\AppData\Roaming\Microsoft\Windows\Themes
     while(!WindowShouldClose())
     {
         mousePos = GetMousePosition();
@@ -106,13 +106,12 @@ int main()
                     strcpy(twFilePath, path);
                     char* twPath = "\\Roaming\\Microsoft\\Windows\\Themes\\TranscodedWallpaper";
                     strcat(twFilePath, twPath);
-                    //write the transcoded wallpaper
                     printf("\nTranscoded Wallpaper File Path: %s\n", twFilePath);
 
                     char cachedFilePath[100];
                     strcpy(cachedFilePath, path);
                     char* cachedFilesAddon = "\\Roaming\\Microsoft\\Windows\\Themes\\CachedFiles";
-                    strcat(cachedFilePath, cachedFilesAddon);//C:\Users\leo.liu\AppData\Roaming\Microsoft\Windows\Themes\CachedFiles
+                    strcat(cachedFilePath, cachedFilesAddon);
                     printf("\nCachedFilePath: %s", cachedFilePath);
 
                     _mkdir(cachedFilePath);
