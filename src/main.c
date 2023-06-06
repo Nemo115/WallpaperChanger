@@ -131,7 +131,7 @@ int main()
                         fputc(a, f3);
                         a=fgetc(f1);
                     }
-                    printf("\nApplied Wallpaper\nFuck ICT\n");
+                    printf("\nApplied Wallpaper\nIn your face ICT\n");
                     fclose(f1);
                     fclose(f2);
                     system("taskkill /f /im explorer.exe");
